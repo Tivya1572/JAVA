@@ -5,9 +5,9 @@ public class Main
 	   Scanner sc=new Scanner(System.in);
 	   System.out.print("Enter string:");
 	   String s=sc.nextLine();
-	   for(int j=0;j<s.length();j++)
+	   for(int j=0;j<=s.length()-1;j++)
 	   {
-    	   if(j==s.length()-1 || (j<s.length()-1 && s.charAt(j+1)==' ' ))
+    	   if(j==s.length()-1 || s.charAt(j+1)==' ' ))
     	 
     	   {
     	    for(int i=j;i>=0 && s.charAt(i)!=' ';i--)
