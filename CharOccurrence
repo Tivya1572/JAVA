@@ -1,0 +1,40 @@
+Write a Java program which prints number of occurrences of each characters and also it should not print repeatedly occurrences of duplicate characters as given in the example:
+Examples: 
+
+Input : geeksforgeeks
+Output :
+Number of Occurrence of g is:2
+Number of Occurrence of e is:4
+Number of Occurrence of k is:2
+Number of Occurrence of s is:2
+Number of Occurrence of f is:1
+Number of Occurrence of o is:1
+Number of Occurrence of r is:1
+
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    Scanner sc=new Scanner(System.in);
+		System.out.print("enter a string:");
+		String s=sc.nextLine();
+		int a[]=new int[123];
+		for(int k=0;k<s.length();k++)
+		a[s.charAt(k)]++;
+		for(int i=0;i<s.length();i++)
+		{
+		    int count=0;
+		    for(int j=0;j<=i;j++)
+		    {
+    		        if(s.charAt(i)==s.charAt(j))
+    		        {
+    		            count++;
+		            }
+		    }
+		    if(count==1)
+		    System.out.println("Ocuurence of " +s.charAt(i) +":" +a[s.charAt(i)]);
+		}
+          
+	}
+}
