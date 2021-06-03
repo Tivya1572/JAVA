@@ -1,0 +1,32 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.println("enter the string:");
+	    String s1=sc.nextLine().toLowerCase();
+	    System.out.println("enter the string:");
+	    String s2=sc.nextLine().toLowerCase();
+	    int i,j;
+	    boolean flag=false;
+    	   for(i=0;i<s1.length();i++)
+    	   {
+    	       for(j=0;j<s2.length();j++)
+    	       {
+    	           if(s1.charAt(i)==s2.charAt(j) && s1.length()==s2.length())
+    	           {
+    	               flag=true;
+    	               continue;
+    	           }
+    	       }
+    	   }
+    	   if(flag==true)
+    	   {
+    	      System.out.println("Anagram"); 
+    	   }
+    	   else
+    	   {
+    	       System.out.println("Not a Anagram");
+    	   }
+    }
+}
