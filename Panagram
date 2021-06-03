@@ -6,27 +6,22 @@ public class Main
 	    System.out.println("enter the string:");
 	    String s=sc.nextLine().toLowerCase();
 	    int a[]=new int[26] ;
-	    int i;
-	    boolean flag=false;
-	    char ch;
-	    for(i=0;i<s.length();i++)
+	    for(int i=0;i<s.length();i++)
 	    {
-	        ch=s.charAt(i);
-    	    if(ch>='a'&& ch<='z'|| ch==' ')
-    	    {
-    		    flag=true;
-    		    continue;
-    	    }
-    	    else
-    	    {
-    	        flag=false;
-    	        System.out.println("Not a panagram");
-    	        break;
-    	    }
+	        if(s.charAt(i)>=97 && s.charAt(i)<=123)
+	        {
+	            a[s.charAt(i)-97]++;
+	        }
+		    
 	    }
-        	if(flag==true)
-        	{
-        	    System.out.println("panagram");
-        	}
+	    for(int i=0;i<a.length;i++)
+	    {
+	        if(a[i]==0 || s.length()<=26)
+	        {
+		    System.out.println("Not a Panagram");
+		    return;
+	         }
+	    }
+	     System.out.println("Panagram");
     }
 }
