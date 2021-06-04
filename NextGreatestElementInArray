@@ -17,7 +17,7 @@ public class Main
 	    {
 	        for(int j=0;j<size-i-1;j=j+1)
 	        {
-	            if(a[j]<a[j+1])
+	            if(a[j]>a[j+1])
 	            {
 	                temp=a[j];
 	                a[j]=a[j+1];
@@ -25,13 +25,14 @@ public class Main
 	            }
 	        }
 	    }
-	    for(int k=a.length-1;k>=0;k--)
+	    for(int k=0;k<a.length;k++)
 	    {
 	        
 	        if(a[k]==pos)
 	        {
-	            System.out.print(+a[k-1]);
+	            System.out.print(+a[k+1]);
 	        }
 	    }
 	}
 }
+
