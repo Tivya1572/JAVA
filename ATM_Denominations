@@ -1,0 +1,22 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("Enter Amount");
+	    Integer amnt=sc.nextInt();
+	    int notes=0,total=0;
+	    int a[]={2000,1000,500,200,100,50,10,1};
+	    for(int i=0;i<a.length;i++)
+	    {
+	        if(a[i]<amnt)
+	        {
+	            notes=amnt/a[i];
+	            System.out.println(+a[i]+"*"+notes);
+	            total=notes+total;
+	            amnt=amnt%a[i];
+	        }
+	    }
+	    System.out.println(+total);
+	}
+}
