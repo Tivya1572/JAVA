@@ -1,0 +1,118 @@
+import java.util.*;
+import java.util.Scanner;
+public class grocery
+{
+    public static void main (String[] args) 
+    {
+        int choice,a,b,d,c=0;
+        double quantity=0,price=0,totalamnt=0;
+        do{
+            Scanner sc=new Scanner(System.in);
+            System.out.println("Welcome to Tivya's grocery!");
+            System.out.println("Taste the best and live long");
+            System.out.println("enter your choice");
+            System.out.println("enter 1 for fruits");
+            System.out.println("enter 2 for veges");
+            System.out.println("enter 3 for necessaries");
+            System.out.println("enter 0 for exit");
+            choice=sc.nextInt();
+            switch(choice)
+            {
+                case 0:
+                    return;
+                case 1:
+                {
+                    System.out.println("enter 1 for apple Rs.20 per kg");
+                    System.out.println("enter 2 for orange Rs.30 per kg");
+                    System.out.println("enter 3 for bananaRs.40 per kg");
+                    System.out.println("enter 4 for grapes Rs.50 per kg");
+                    System.out.println("enter 5 for exit");
+                    a=sc.nextInt();
+                    switch(a)
+                    {
+                        case 1:
+                            price=20;
+                            break;
+                        case 2:
+                            price=30;
+                            break;
+                        case 3:
+                            price=40;
+                            break;
+                        case 4:
+                            price=50;
+                            break;
+                        case 5:
+                            return;
+                        }
+                    System.out.println("How many do you want?");
+                    quantity=sc.nextDouble();
+                    totalamnt=totalamnt+(quantity*price);
+                    break;
+                }
+                case 2:
+                {
+                    System.out.println("enter 1 for brinjal Rs.100 per kg");
+                    System.out.println("enter 2 for tomato Rs.35 per kg");
+                    System.out.println("enter 3 for onion Rs.47 per kg");
+                    System.out.println("enter 4 for potato Rs.50 per kg");
+                    System.out.println("enter 5 for exit");
+                    b=sc.nextInt();
+                    switch(b)
+                    {
+                        case 1:
+                            price=100;
+                            break;
+                        case 2:
+                            price=35;
+                            break;
+                        case 3:
+                            price=47;
+                            break;
+                        case 4:
+                            price=50;
+                            break;
+                        case 5:
+                            return;
+                    }
+                    System.out.println("How many do you want?");
+                    quantity=sc.nextDouble();
+                    totalamnt=totalamnt+(quantity*price);
+                    break;
+                }
+                case 3:
+                    System.out.println("enter 1 for sugar Rs.15 per kg");
+                    System.out.println("enter 2 for salt Rs.10 per kg");
+                    System.out.println("enter 3 for milk Rs.13 per litre");
+                    System.out.println("enter 4 for wheat  Rs.40 per kg");
+                    System.out.println("enter 5 for exit");
+                    d=sc.nextInt();
+                    switch(d)
+                    {
+                        case 1:
+                            price=15;
+                            break;
+                        case 2:
+                            price=10;
+                            break;
+                        case 3:
+                            price=13;
+                            break;
+                        case 4:
+                            price=40;
+                            break;
+                        case 5:
+                            return;
+                    }
+                    System.out.println("How many do you want?");
+                    quantity=sc.nextDouble();
+                    totalamnt=totalamnt+(quantity*price);
+                    break;
+                }
+                System.out.println("If you have completed your shopping enter 0 for no/1 for yes");
+                    c=sc.nextInt();
+        }
+        while(c>0);
+        System.out.println("Total amount:"+totalamnt);
+    }
+}
