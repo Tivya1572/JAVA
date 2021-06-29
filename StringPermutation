@@ -1,0 +1,30 @@
+import java.util.Scanner;
+import java.util.*;
+public class Main
+{
+    public static void swap(char ch[],int i,int j)
+    {
+        char temp=ch[i];
+        ch[i]=ch[j];
+        ch[j]=temp;
+        
+    }
+    public static void permutation(char ch[],int index_value)
+    {
+        if(index_value==ch.length)
+        {
+            System.out.println(String.valueOf(ch));
+        }
+        for(int i=index_value;i<ch.length;i++)
+        {
+            swap(ch,index_value,i);
+            permutation(ch,index_value+1);
+            swap(ch,index_value,i);
+        }
+    }
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    String s=sc.nextLine();
+	    permutation(s.toCharArray(),0);
+	}
+}
