@@ -1,0 +1,43 @@
+import java.util.Scanner;
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    int start=sc.nextInt();
+	    int end=sc.nextInt();
+	    int count=0,s=0;
+	    int i;
+	    int a[]=new int[end-start];
+	    for(i=start;i<=end;i++)
+	    {
+	        boolean flag = true;
+		  for(int k=2; k<=Math.sqrt(i); k++)
+		  {
+		        if(i%k == 0)
+		        {
+		            flag = false;
+		            break;
+		        }
+		    }
+		    if(flag)
+    	        {
+    	                a[count]=i;
+    	                System.out.println(a[count]);
+    	                count=count+1;
+    	        }
+	        }
+	    for(int k=0;k<count;k++)
+	    {
+	        for(int m=k+1;m<count;m++)
+	        {
+	            if((a[k]-a[m]==6)||(a[k]-a[m]==-6))
+	            {
+	                System.out.println("("+a[k]+","+a[m]+")");
+	                s=s+1;
+	            }
+	        }
+	    }
+	    System.out.println(s);
+	}
+}
