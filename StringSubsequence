@@ -1,0 +1,22 @@
+public class Main
+{
+	public static void main(String[] args) {
+	String s="abcdefgh";
+	String a="age";
+	int j=0;
+	Boolean flag=false;
+	for(int i=0;i<s.length()&&j<a.length();i++)
+	{
+	    if(s.charAt(i)==a.charAt(j))
+	    {
+	        flag=true;
+    	    j=j+1;
+	    }
+	}
+	if(flag && j==a.length())
+      System.out.println("Subsequence");
+    else
+      System.out.println("Not  a Subsequence");
+
+	}
+}
