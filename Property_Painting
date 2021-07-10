@@ -1,0 +1,38 @@
+import java.util.*; 
+import java.util.Scanner;
+
+class Main{
+public static void main(String[] args){
+Scanner sc=new Scanner(System.in);
+int interior=sc.nextInt(); 
+int exterior=sc.nextInt();
+float interiorTotal=0; 
+float total;
+float exteriorTotal=0;
+int interiorCost=18;
+int exteriorCost=12;
+
+for (int i=0;i<interior; i++)
+{
+float areaInterior=sc.nextFloat();
+if(areaInterior==0)
+    System.out.print("don't want to paint that wall");
+else
+{
+interiorTotal=interiorTotal+areaInterior*interiorCost;
+}
+}
+for (int i=0;i<exterior; i++)
+{
+float areaExterior=sc.nextFloat();
+if(areaExterior ==0)
+    System.out.print("don't want to paint that wall");
+else{
+exteriorTotal=exteriorTotal+areaExterior *exteriorCost; 
+}
+}
+
+total=interiorTotal+exteriorTotal;
+System.out.println("Total estimated Cost: "+total);
+}
+}
