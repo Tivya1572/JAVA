@@ -1,0 +1,21 @@
+import java.util.*;
+import java.util.Scanner;
+class Main{
+    public static void main(String[] args)
+    {
+        int n=10,k=5;
+        Scanner sc=new Scanner(System.in);
+        int c=sc.nextInt();
+        if(c>=1 && c<=5)
+        {
+            n=n-c;
+            System.out.println("Number of candies left:"+n);
+            System.out.println("Number of candies sold:"+c);
+        }
+        else{
+            System.out.println("INVALID INPUT");
+            System.out.println("Number of candies left:"+n);
+            
+        }
+    }
+}
